@@ -4,11 +4,11 @@ module ViewModel
   abstract class Base
     include Helpers
 
-    private abstract def content(io)
+    private abstract def content(__kilt_io__)
     private abstract def layout(&block)
 
     def render
-      layout { |io| content(io) }
+      layout { |__kilt_io__| content(__kilt_io__) }
     end
 
     # Inserts view content in a layout.
